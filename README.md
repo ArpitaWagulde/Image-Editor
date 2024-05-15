@@ -1,3 +1,6 @@
+# Collaborator
+https://github.com/RajivShah1798
+
 # DESIGN
 
 We have implemented a Model-View-Controller Design for this Application.
