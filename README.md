@@ -1,6 +1,6 @@
 # DESIGN
 
-We have implemented a Model-Controller Design for this Application.
+We have implemented a Model-View-Controller Design for this Application.
 
 ## MODEL
 
@@ -181,67 +181,3 @@ GUIView
 The image(Sample.png) and all its processed variants are generated and owned by us (Rajiv Shah
 and Arpita Wagulde) and we here by authorize the use of these images for the purpose of testing and
 grading our solution.
-
-# Change Log
-
-## Change log of Assignment 5
-
-* Changed README for better readability
-* Abstracted code written for flipHorizontally and flipVertically
-* Fixed Exception Handling issue in Save JPG/PNG
-* Added an interface for the controller named ImageProcessingController and controller for
-  Assignment 4 is ImageProcessingControllerImp.
-* Created a new interface and a new class for the functionalities to be offered in the Assignment 5.
-  This will retain the Assignment 4 application as is and allow us a new application of Assignment 5
-  with all the functionalities offered in Assignment 4 included in it.
-* Used interfaces instead of using concrete classes while defining objects.
-* test.imageprocessingtest.ImageProcessingControllerTest was using Junit 3 for testing where class
-  extends TestCase. It has now been replaced with call to static methods of asserts as part of
-  Junit4.
-* A controller was catching and then throwing the same exception in a catch block. But that try
-  block will never throw any exception. Removed that redundant exception throwing and try-catch
-  block.
-* Operations on a single image are now done in Image class.
-* ImageData is made private.
-* Input/Output operations of an image will now be done in ImageIOController - a new class which is
-  part of the controller.
-* A new ImageProcessingMIMEControllerImp class is created which is now a new controller for
-  Assignment 5. This will help us keep two applications separately, one for Assignment 4 and another
-  for Assignment 5.
-* Main method is now modified to take an argument 'Old' if the user wants to use the Assignment 4
-  model. If no argument is passed, Assignment 5 model will be called by default.
-* Modified/Wrote tests to accommodate all the above design changes.
-* Implemented Command Design Pattern.
-* Created test packages separate for both the applications.
-
-## Change log of Assignment 6
-
-* Created a new interface and a new class for the functionalities to be offered in the Assignment 6.
-  These were required to support the graphical user interface. The new interface is called
-  ImageProcessingGRIMEModel and the class is called ImageProcessingGRIMEModelImp.
-* The new model classes contain methods required to render the images in required formats to be sent
-  to the view to be displayed through the controller.
-* Similarly, to support the graphical user interface a new controller interface and class is
-  created. They are called ImageProcessingGRIMEController and ImageProcessingGRIMEControllerImp
-  respectively.
-* Updated Main class and main method to now support the new requirements of graphical user
-  interface, interactive command line and running the script directly.
-* ImageIOController was not throwing an exception if user tries to save the image of unsupported
-  file format. Changed that so that user now will be notified of the same.
-* A method used to create hashmap of objects required for Command Design Pattern was of return type
-  void. Changed that to return the map so that now the same method can be used in new controller to
-  create the map with one additional command to be supported.
-* The ImageProcessingCommand classes earlier required appendable to add an error message to it.
-  Changed that so that now the classes send the error message ahead to the controller as an
-  exception. And then the controller will either display the message to user through view or add the
-  error message to appendable to be displayed on the command line.
-* The ImageProcessingCommand classes were sending success messages to the user. Removed that so that
-  now only errors will be thrown.
-* Changed access modifier of a method in Image class to private as it was needed internally only.
-* The preview method of ImageProcessingMIMEModelImp is now package private instead of private so
-  that new model class ImageProcessingGRIMEModelImp can reuse it.
-* Added a test to check whether the run script command actually parses the commands as in the given
-  format in the controller test.
-* ImageProcessingCommand Levels Adjust was not throwing an exception if no level adjusting
-  parameters are passed. Fixed that to throw an exception, if this occurs.
-* Added new tests and changed older tests to accommodate these new changes
