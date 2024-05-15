@@ -1,0 +1,3 @@
+rgb-split koala red-koala green-koala blue-koala
+brighten 25 blue-koala blue-bright-koala
+rgb-combine blueTintKoala red-koala green-koala blue-bright-koala

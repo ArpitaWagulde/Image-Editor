@@ -1,0 +1,10 @@
+load images/Koala.ppm koala
+compress 40 koala koala-compress
+save images/koala-compress.png koala-compress
+histogram koala koala-hist
+save images/koala-hist.png koala-hist
+blur koala koala-partialblur split 40
+save images/koala-partialblur.png koala-partialblur
+sepia koala-partialblur koala-partialblursepia split 60
+save images/koala-partialblursepia.png koala-partialblursepia
+quit

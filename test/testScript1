@@ -1,0 +1,6 @@
+#Load the Koala image
+load images/Koala.ppm koala
+run test/testScript2
+#Save the tinted file
+save images/blueTintKoala.ppm blueTintKoala
+quit

@@ -1,0 +1,11 @@
+load images/Koala.ppm koala
+brighten 10 koala koala-brighter
+vertical-flip koala koala-vertical
+horizontal-flip koala-vertical koala-vertical-horizontal
+value-component koala koala-greyscale
+save images/koala-brighter.ppm koala-brighter
+save images/koala-gs.png koala-greyscale
+rgb-split koala koala-red koala-green koala-blue
+brighten 50 koala-red koala-red
+rgb-combine koala-red-tint koala-red koala-green koala-blue
+save images/koala-red-tint.ppm koala-red-tint
