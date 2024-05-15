@@ -1,6 +1,3 @@
-# Collaborator
-https://github.com/RajivShah1798
-
 # DESIGN
 
 We have implemented a Model-View-Controller Design for this Application.
@@ -176,3 +173,6 @@ GUIView
   user mentions '-text'.
 * If a script file is passed as an argument, then the program runs the script and exits.
 * By default, graphical user interface is launched when the program runs.
+
+# Collaborator
+https://github.com/RajivShah1798
