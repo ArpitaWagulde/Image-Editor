@@ -173,11 +173,3 @@ GUIView
   user mentions '-text'.
 * If a script file is passed as an argument, then the program runs the script and exits.
 * By default, graphical user interface is launched when the program runs.
-
-# Other
-
-## CITATION FOR IMAGE:
-
-The image(Sample.png) and all its processed variants are generated and owned by us (Rajiv Shah
-and Arpita Wagulde) and we here by authorize the use of these images for the purpose of testing and
-grading our solution.
